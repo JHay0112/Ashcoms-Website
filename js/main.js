@@ -25,29 +25,24 @@ async function exitLoadingScreen() {
 // Slideshow
 async function runSlideShow() {
 
-    images = [
-        "1.jpg",
-        "2.jpg"
-    ];
-
     header = document.getElementById("header");
     pseudoHeader = document.getElementById("pseudo-header");
 
     imageURL = "url('img/header/";
-    imageURL = imageURL.concat(images[0], "')");
+    imageURL = imageURL.concat(1, "')");
 
-    for(var i = 0; i <= images.length; i++) {
+    for(var i = 1; i <= 14; i++) {
 
-        if(i >= images.length) {
-            i = 0;
+        if(i >= 14) {
+            i = 1;
         }
 
-        pseudoHeader.style.backgroundImage = "url(\"img/header/".concat(images[i], "\")");
+        pseudoHeader.style.backgroundImage = "url(\"img/header/".concat(i, ".jpg\")");
         await sleep(500);
         pseudoHeader.style.visibility = "visible";
         pseudoHeader.style.animation = "slideshow-new-slide 1s ease";
         await sleep(1000);
-        header.style.backgroundImage = "url(\"img/header/".concat(images[i], "\")");
+        header.style.backgroundImage = "url(\"img/header/".concat(i, ".jpg\")");
         pseudoHeader.style.animation = "";
         pseudoHeader.style.visibility = "hidden";
         await sleep(8000);
