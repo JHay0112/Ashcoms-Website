@@ -226,7 +226,6 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: inherit;
-    transition: 0.3s ease all;
 }
 
 nav ul li:hover {
