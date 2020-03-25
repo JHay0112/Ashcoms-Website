@@ -209,7 +209,7 @@ nav {
     text-align: center;
     background-color: white;
     height: 60px;
-    z-index: 2;
+    z-index: 5;
 }
 
 nav ul li {
@@ -217,14 +217,15 @@ nav ul li {
     display: inline-block;
     transition: 0.3s ease all;
     padding: 0;
+    position: relative;
+    top: -42px;
+    padding: 20px;
+    color: #394791;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #394791;
-    position: relative;
-    top: -7px;
-    padding: 20px;
+    color: inherit;
     transition: 0.3s ease all;
 }
 
@@ -232,7 +233,7 @@ nav ul li:hover {
     opacity: 0.8;
 }
 
-nav ul li.active a {
+nav ul li.active {
     background-color: #394791;
     color: white;
     transition: 0.3s ease all;
@@ -241,9 +242,51 @@ nav ul li.active a {
 nav.stick {
     position: fixed;
     top: 0;
+    z-index: 3;
+}
+
+#nav-responsive-button {
+    display: none;
+}
+
+/* Mobile nav */
+@media screen and (max-width: 768px) {
+
+    #nav {
+        height: 60px;
+        margin: 0;
+        transition: 0.3s ease all;
+        overflow: hidden;
+    }
+
+    #nav ul {
+        position: relative;
+        top: 32px;
+        left: -10px;
+        padding: 0;
+        margin: 0;
+    }
+
+    #nav ul li {
+        margin: 0;
+        width: 100vw;
+    }
+
+    #nav-responsive-button {
+        display: block; 
+    }
+
+    #nav.responsive ul li {
+        display: block;
+        height: 60px;
+    }
 }
 
 /* Content */
+
+#content {
+    z-index: 1;
+}
 
 #content h1 {
     text-align: center;

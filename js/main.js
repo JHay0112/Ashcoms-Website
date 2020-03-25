@@ -5,7 +5,7 @@
 
 // Globals
 
-var nav = document.querySelector("#nav"); // Get the nav
+var nav = document.getElementById("nav"); // Get the nav
 var sticky = nav.offsetTop; // Get the offset position of the nav
 
 // Functions
@@ -63,10 +63,25 @@ function stickyNav() {
 
     if (window.pageYOffset >= sticky) {
         nav.classList.add("stick")
-        content.style.top = "60px";
+        if(nav.classList.contains("responsive")) {
+            content.style.top = nav.scrollHeight + "px";
+        } else {
+            content.style.top = "60px";
+        }
     } else {
         nav.classList.remove("stick");
-        content.style.top = "0px";
+        content.style.top = "";
+    }
+}
+
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function toggleResponsiveNav() {
+    if (!nav.classList.contains("responsive")) {
+        nav.classList.add("responsive");
+        nav.style.height = nav.scrollHeight + "px";
+    } else {
+        nav.classList.remove("responsive");
+        nav.style.height = "60px";
     }
 }
 
