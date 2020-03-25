@@ -384,6 +384,10 @@ input[type=submit]:hover {
     margin-left: -10px;
 }
 
+#map {
+    min-height: 400px;
+}
+
 /* Footer */
 
 footer {
