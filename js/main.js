@@ -44,12 +44,12 @@ async function runSlideShow() {
 
         pseudoHeader.style.backgroundImage = "url(\"img/header/".concat(images[i], "\")");
         await sleep(500);
-        pseudoHeader.style.display = "inline-block";
-        pseudoHeader.style.animation = "slideshow-slide-in 1s ease";
+        pseudoHeader.style.visibility = "visible";
+        pseudoHeader.style.animation = "slideshow-new-slide 1s ease";
         await sleep(1000);
         header.style.backgroundImage = "url(\"img/header/".concat(images[i], "\")");
         pseudoHeader.style.animation = "";
-        pseudoHeader.style.display = "none";
+        pseudoHeader.style.visibility = "hidden";
         await sleep(8000);
     }
 
