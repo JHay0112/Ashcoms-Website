@@ -9,7 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <!-- Tab Data -->
-        <title>Ashley Communications Ltd.</title>
+        <title>Ashley Communications Ltd</title>
         <link rel="icon" href="img/logo/favicon.png" />
 
         <!-- Stylesheets -->
@@ -22,17 +22,52 @@
             <img id="loading-spinner" src="img/spinner.png" alt="Loading Spinner" />
         </div>
 
-        <header id="pseudo-header"></header>
+        <header id="pseudo-header" class="header"></header>
 
-        <header id="header">
+        <header id="header" class="header">
             <img id="header-logo" alt="Ashley Communications Ltd." src="img/logo/full.png" />
         </header>
 
         <main>
 
+            <header id="nav-header">
+                <nav class="col-12" id="nav">
+                    <ul>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#networks">Networks</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#history">History</a></li>
+                    </ul>
+                </nav>
+            </header>
+
             <div class="col-2"></div>
 
             <div class="col-8" id="content">
+
+                <article class="row" id="history">
+
+                    <section class="col-8" style="padding-right: 20px;">
+
+                        <h2>History</h2>
+
+                        <p>Ashley Communications is a modern company with a long history in the South Canterbury and North Otago regions.</p>
+                        <p>The original company, Ashley's Electronics Ltd, was founded in the mid 1930's and among other things charged batteries and sold bicycles! The focus then shifted to televisions, and then changed direction again during the 1970's when we became a Tait mobile radio dealer.</p>
+                        <p>In 1984 David Thomson purchased the business from the original Ashley family.</p>
+                        <p>The Government deregulation of the radio industry in 1989 cleared the way for Ashley's Electronics to move from not just providing two way radio equipment but also providing radio network services and at this point the company began to develop its own high level repeater sites. From then our network has kept on expanding and we are proud to be able to offer bespoke radio network solutions to our customers today.</p>
+                        <p>Ashley Electronics Ltd changed hands again in 2020 to the current owners Carl and Shonagh Garner, and was renamed to Ashley Communications Ltd to better reflect the main focus of the business.</p>
+
+                    </section>
+
+                    <aside class="col-4 dynamic-img" style="background-image: url('img/header/1.jpg');"></aside>
+
+                </article>
+
+                <hr />
+
+                <footer>
+                    <small>&copy; Ashley Communications Ltd. | Page made by <a href="https://jordanhay.tk/" target="_blank">Jordan Hay</a></small>
+                </footer>
 
             </div>
 
@@ -40,6 +75,7 @@
         </main>
 
         <!-- Scripts -->
+        <script src="js/menuspy.min.js"></script>
         <script src="js/main.js"></script>
         <script src="https://kit.fontawesome.com/91769ccd18.js" crossorigin="anonymous"></script>
     </body>

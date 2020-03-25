@@ -3,6 +3,11 @@
     Author: Jordan Hay
 */
 
+// Globals
+
+var nav = document.querySelector("#nav"); // Get the nav
+var sticky = nav.offsetTop; // Get the offset position of the nav
+
 // Functions
 // Sleep function
 function sleep(ms) {
@@ -49,3 +54,29 @@ async function runSlideShow() {
     }
 
 }
+
+// Add the sticky class to the nav when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function stickyNav() {
+
+    content = document.getElementById("content");
+    content.style.position = "relative";
+
+    if (window.pageYOffset >= sticky) {
+        nav.classList.add("stick")
+        content.style.top = "60px";
+    } else {
+        nav.classList.remove("stick");
+        content.style.top = "0px";
+    }
+}
+
+// Main
+
+// Event listeners
+
+// When the user scrolls the page, execute stickyNav function
+window.onscroll = function() {stickyNav()};
+
+// MenuSpy
+
+var ms = new MenuSpy(document.querySelector("#nav-header"));

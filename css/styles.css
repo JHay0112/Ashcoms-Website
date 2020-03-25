@@ -6,11 +6,11 @@
 */
 
 /* Import Fonts */
-@import url('https://fonts.googleapis.com/css?family=Questrial|Raleway&display=swap'); 
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap'); 
 
 /* Every Element (Ones below will overide if need be) */
 * { 
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
 
@@ -29,7 +29,13 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Questrial', sans-serif;
+    color: #394791;
+}
+
+hr {
+    color: #394791;
+    background-color: #394791;
+    border-color: #394791;
 }
 
 /* Animations */
@@ -129,12 +135,6 @@ h1, h2, h3, h4, h5, h6 {
     .desktop-only {display: inline-block;}
 }
 
-/* Horizontal Line */
-hr {
-    color: #252525;
-    width: 100%;
-}
-
 /* Loading */
 
 #loading-screen {
@@ -169,9 +169,16 @@ hr {
     margin-left: -125px;
 }
 
+/* Main */
+
+main {
+    margin-top: 300px;
+}
+
 /* Header */
 
-header {
+.header {
+    margin-top: -300px;
     position: absolute;
     height: 300px;
     display: inline-block;
@@ -193,4 +200,72 @@ header img {
     height: 100px;
     filter: brightness(0) invert(1) drop-shadow(0px 0px 3px RGBA(0, 0, 0, 0.75));
     z-index: 1;
+}
+
+/* Nav */
+
+nav {
+    border-bottom: 2px solid #394791;
+    text-align: center;
+    background-color: white;
+    height: 60px;
+    z-index: 2;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    transition: 0.3s ease all;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #394791;
+    position: relative;
+    top: -7px;
+    padding: 20px;
+    transition: 0.3s ease all;
+}
+
+nav ul li:hover {
+    opacity: 0.8;
+}
+
+nav ul li.active a {
+    background-color: #394791;
+    color: white;
+    transition: 0.3s ease all;
+}
+
+nav.stick {
+    position: fixed;
+    top: 0;
+}
+
+/* Content */
+
+#content h1 {
+    text-align: center;
+}
+
+/* Dynamic Images */
+
+.dynamic-img {
+    min-height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    color: RGBA(0, 0, 0, 0.75);
+    margin-bottom: 1000px;
+}
+
+footer small a {
+    color: inherit;
 }
