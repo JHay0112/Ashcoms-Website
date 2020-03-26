@@ -108,6 +108,14 @@ a:hover {
     padding: 10px;
 }
 
+.row-s {
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
 .row {
     width: 100%;
     display: inline-block;
@@ -382,6 +390,20 @@ nav.stick {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+/* Product images */
+
+.product-img-wrapper {
+    padding-bottom: 20px;
+}
+
+.product-img {
+    margin: auto;
+    object-fit: contain;
+    height: 100%;
+    object-position: center center;
+    padding: 20px;
 }
 
 /* Contact */
