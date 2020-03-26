@@ -256,10 +256,22 @@ nav ul li:hover {
     opacity: 0.8;
 }
 
+nav ul li a:hover {
+    text-decoration: none;
+}
+
 nav ul li.active {
     background-color: #394791;
     color: white;
     transition: 0.3s ease all;
+}
+
+nav ul li.active:hover {
+    opacity: 1;
+}
+
+nav ul li.active:hover a {
+    cursor: default;
 }
 
 nav.stick {
