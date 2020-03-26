@@ -30,27 +30,31 @@ async function exitLoadingScreen() {
 // Slideshow
 async function runSlideShow() {
 
+    imgNum = 14; // Amount of images in  
+
     header = document.getElementById("header");
     pseudoHeader = document.getElementById("pseudo-header");
 
-    imageURL = "url('img/header/";
-    imageURL = imageURL.concat(1, "')");
+    img = 0;
 
-    for(var i = 1; i <= 14; i++) {
+    while(true) {
 
-        if(i >= 14) {
-            i = 1;
+        prevImg = img;
+
+        // Stops getting the same image twice in a row
+        while(prevImg === img) {
+            img = Math.floor(Math.random() * (imgNum - 1) + 1);
         }
 
-        pseudoHeader.style.backgroundImage = "url(\"img/header/".concat(i, ".jpg\")");
+        pseudoHeader.style.backgroundImage = "url(\"img/header/".concat(img, ".jpg\")");
         await sleep(500);
         pseudoHeader.style.visibility = "visible";
         pseudoHeader.style.animation = "slideshow-new-slide 1s ease";
         await sleep(1000);
-        header.style.backgroundImage = "url(\"img/header/".concat(i, ".jpg\")");
+        header.style.backgroundImage = "url(\"img/header/".concat(img, ".jpg\")");
         pseudoHeader.style.animation = "";
         pseudoHeader.style.visibility = "hidden";
-        await sleep(8000);
+        await sleep(7000);
     }
 
 }
