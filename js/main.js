@@ -83,9 +83,11 @@ function toggleResponsiveNav() {
     if (!nav.classList.contains("responsive")) {
         nav.classList.add("responsive");
         nav.style.height = nav.scrollHeight + "px";
+        stickyNav();
     } else {
         nav.classList.remove("responsive");
         nav.style.height = "60px";
+        stickyNav();
     }
 }
 

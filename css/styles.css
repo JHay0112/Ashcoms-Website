@@ -325,6 +325,7 @@ nav.stick {
 
 #content {
     z-index: 1;
+    transition: 0.3s ease all;
 }
 
 #content h1 {
