@@ -207,7 +207,7 @@ main {
     height: 300px;
     display: inline-block;
     background-size: cover;
-    background-position: top center;
+    background-position: bottom;
     width: 100vw;
 }
 
