@@ -38,6 +38,16 @@ hr {
     border-color: #394791;
 }
 
+a {
+    color: #394791;
+    text-decoration: none;
+    transition: 0.3s ease all;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 /* Animations */
 
 @keyframes fade-in {
@@ -393,7 +403,7 @@ input[type=submit]:hover {
 footer {
     text-align: center;
     color: RGBA(0, 0, 0, 0.75);
-    margin-bottom: 100vh;
+    margin-bottom: 60vh;
 }
 
 footer small a {
