@@ -80,15 +80,19 @@ function stickyNav() {
 
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
 function toggleResponsiveNav() {
+
+    navAnchors = document.querySelectorAll(".anchor");
+
     if (!nav.classList.contains("responsive")) {
         nav.classList.add("responsive");
         nav.style.height = nav.scrollHeight + "px";
-        stickyNav();
+        for(i = 0; i < navAnchors.length; i++) {navAnchors[i].style.top = -nav.scrollHeight - 10 + "px";}
     } else {
         nav.classList.remove("responsive");
         nav.style.height = "60px";
-        stickyNav();
+        for(i = 0; i < navAnchors.length; i++) {navAnchors[i].style.top = -60 - 10 + "px";}
     }
+    stickyNav();
 }
 
 // Main
