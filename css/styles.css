@@ -41,7 +41,6 @@ hr {
 a {
     color: #394791;
     text-decoration: none;
-    transition: 0.3s ease all;
 }
 
 a:hover {
