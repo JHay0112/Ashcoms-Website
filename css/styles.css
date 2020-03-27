@@ -456,4 +456,5 @@ footer {
 
 footer small a {
     color: inherit;
+    text-decoration: underline;
 }
